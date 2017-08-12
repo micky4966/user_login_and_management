@@ -316,7 +316,7 @@ CREATE TABLE `login`.`users` (
 
 
 INSERT INTO `login`.`users` VALUES
-("1","admin","Admin","Admin","admin","admin@admin.com","$2y$10$ImA.R0Nq6PlTehF5V8fPQOH6lmB6D9ElVWnUnAt6NRH0ZDbklH7fK","1","demo_pic.png","0","2017-01-17 17:10:56","","$2y$10$nYPP7ckyshNESvwcOY1NEONdtp3/c.8WHhvvDWCS6Crfu7wohniWW","j8e0TurzKy2016-05-03 10:42:31","1");
+("1","admin","Admin","Admin","admin","admin@admin.com","$2y$10$ImA.R0Nq6PlTehF5V8fPQOH6lmB6D9ElVWnUnAt6NRH0ZDbklH7fK","1","demo_pic.png","0","2017-08-12 17:10:56","","$2y$10$nYPP7ckyshNESvwcOY1NEONdtp3/c.8WHhvvDWCS6Crfu7wohniWW","j8e0TurzKy2017-08-12 17:10:56","1");
 
 --
 -- Indexes for dumped tables
