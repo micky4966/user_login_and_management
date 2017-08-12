@@ -1,3 +1,27 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.12deb2+deb8u1build0.15.04.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Ago 12, 2017 alle 17:30
+-- Versione del server: 5.6.28-0ubuntu0.15.04.1
+-- PHP Version: 5.6.4-4ubuntu6.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `login`
+--
+
+-- --------------------------------------------------------
+
 CREATE DATABASE IF NOT EXISTS `login`;
 
 CREATE TABLE `permission` (
@@ -294,4 +318,58 @@ CREATE TABLE `users` (
 INSERT INTO users VALUES
 ("1","admin","Admin","Admin","admin","admin@admin.com","$2y$10$nJAGLgjBJnsXBWrDIZy51.dTNORGU4UDmMx9T60MCKq7tUtvIBbrW","1","demo_pic.png","0","2017-01-17 17:10:56","","$2y$10$nYPP7ckyshNESvwcOY1NEONdtp3/c.8WHhvvDWCS6Crfu7wohniWW","j8e0TurzKy2016-05-03 10:42:31","1");
 
+--
+-- Indexes for dumped tables
+--
 
+--
+-- Indexes for table `permission`
+--
+ALTER TABLE `permission`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `setting`
+--
+ALTER TABLE `setting`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `templates`
+--
+ALTER TABLE `templates`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`users_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `permission`
+--
+ALTER TABLE `permission`
+MODIFY `id` int(122) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `setting`
+--
+ALTER TABLE `setting`
+MODIFY `id` int(122) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT for table `templates`
+--
+ALTER TABLE `templates`
+MODIFY `id` int(121) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+MODIFY `users_id` int(121) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
