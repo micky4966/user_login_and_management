@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 
 CREATE DATABASE IF NOT EXISTS `login`;
 
-CREATE TABLE `permission` (
+CREATE TABLE `login`.`permission` (
   `id` int(122) unsigned NOT NULL AUTO_INCREMENT,
   `user_type` varchar(250) DEFAULT NULL,
   `data` text,
@@ -32,14 +32,14 @@ CREATE TABLE `permission` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 
-INSERT INTO permission VALUES
+INSERT INTO `login`.`permission` VALUES
 ("1","Member","{\"users\":{\"own_create\":\"1\",\"own_read\":\"1\",\"own_update\":\"1\",\"own_delete\":\"1\"}}"),
 ("2","admin","{\"users\":{\"own_create\":\"1\",\"own_read\":\"1\",\"own_update\":\"1\",\"own_delete\":\"1\",\"all_create\":\"1\",\"all_read\":\"1\",\"all_update\":\"1\",\"all_delete\":\"1\"}}");
 
 
 
 
-CREATE TABLE `setting` (
+CREATE TABLE `login`.`setting` (
   `id` int(122) unsigned NOT NULL AUTO_INCREMENT,
   `keys` varchar(255) DEFAULT NULL,
   `value` varchar(255) DEFAULT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE `setting` (
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 
-INSERT INTO setting VALUES
+INSERT INTO `login`.`setting` VALUES
 ("1","website","User Login and Management"),
 ("2","logo","User_Management.png"),
 ("3","favicon","User_Management.ico"),
@@ -69,7 +69,7 @@ INSERT INTO setting VALUES
 
 
 
-CREATE TABLE `templates` (
+CREATE TABLE `login`.`templates` (
   `id` int(121) unsigned NOT NULL AUTO_INCREMENT,
   `module` varchar(255) DEFAULT NULL,
   `code` varchar(255) DEFAULT NULL,
@@ -79,7 +79,7 @@ CREATE TABLE `templates` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 
-INSERT INTO templates VALUES
+INSERT INTO `login`.`templates` VALUES
 ("1","forgot_pass","forgot_password","Forgot password","<html xmlns=\"http://www.w3.org/1999/xhtml\"><head>
 \n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 \n  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">
@@ -295,7 +295,7 @@ INSERT INTO templates VALUES
 
 
 
-CREATE TABLE `users` (
+CREATE TABLE `login`.`users` (
   `id` int(122) unsigned NOT NULL AUTO_INCREMENT,
   `user_type` varchar(250) DEFAULT NULL,
   `firstName` varchar(255) DEFAULT NULL,
@@ -315,7 +315,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 
-INSERT INTO users VALUES
+INSERT INTO `login`.`users` VALUES
 ("1","admin","Admin","Admin","admin","admin@admin.com","$2y$10$nJAGLgjBJnsXBWrDIZy51.dTNORGU4UDmMx9T60MCKq7tUtvIBbrW","1","demo_pic.png","0","2017-01-17 17:10:56","","$2y$10$nYPP7ckyshNESvwcOY1NEONdtp3/c.8WHhvvDWCS6Crfu7wohniWW","j8e0TurzKy2016-05-03 10:42:31","1");
 
 --
