@@ -3,10 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $active_group = 'default';
 $query_builder = TRUE;
-$hostname ="";
-$username ="";
-$password ="";
-$database ="user_login_and_management";	
+$hostname ="localhost";
+$username ="root";
+$password ="Your mysql password";
+$database ="login";	
 
 $db['default'] = array(
 	'dsn'	=> '',
